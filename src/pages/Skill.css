@@ -1,0 +1,31 @@
+#skills-content-container {
+	max-width: 1366px;
+	margin-top: 60px;
+	display: grid;
+	grid-column-gap: 16px;
+}
+
+#hard-skills-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 50px;
+	--hard-skills-width: 130px;
+}
+
+.hard-skills-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	width: var(--hard-skills-width);
+}
+
+.hard-skills-content img {
+	width: 100%;
+}
+
+.hard-skills-content p {
+	text-align: center;
+	font-size: 32px;
+}

@@ -1,0 +1,36 @@
+.hover-card {
+	--card-padding: 16px;
+	padding: var(--card-padding);
+	background-color: white;
+	position: relative;
+	max-width: 534px;
+	min-width: 400px;
+	width: 100%;
+	transition: 0.3s;
+	cursor: pointer;
+	overflow: hidden;
+	flex: 1 1 0;
+	aspect-ratio: 3 / 2;
+}
+
+.hover-card:hover {
+	background-color: var(--color-palette-900);
+}
+
+.hover-card img {
+	object-fit: contain;
+	background-color: white;
+	width: calc(100% - var(--card-padding));
+	height: calc(100% - var(--card-padding));
+	position: absolute;
+	transition: 0.3s;
+}
+
+.hover-card img:hover {
+	opacity: 0;
+	transform: scale(1.2);
+}
+
+.hover-card p {
+	text-align: center;
+}

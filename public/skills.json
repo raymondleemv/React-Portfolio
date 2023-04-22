@@ -1,0 +1,189 @@
+[
+	{
+		"id": 5,
+		"name": "C++",
+		"logo": "http://localhoststorage/skills/lSH92XaKhBDX9clhKMr7lskBQk1RXtPPTe9FPC36.png",
+		"user_id": 1,
+		"created_at": "2023-04-21T23:45:14.000000Z",
+		"updated_at": "2023-04-21T23:47:24.000000Z",
+		"user": {
+			"id": 1,
+			"first": "Raymond",
+			"last": "Lee",
+			"email": "raymond@gmail.com",
+			"email_verified_at": null,
+			"created_at": "2023-04-21T23:56:45.000000Z",
+			"updated_at": "2023-04-21T23:56:45.000000Z"
+		}
+	},
+	{
+		"id": 6,
+		"name": "C#",
+		"logo": "http://localhoststorage/skills/kx6KTmurzHMy31GUDzOZYyKwTldPw8Kg7QhO6DGo.png",
+		"user_id": 1,
+		"created_at": "2023-04-21T23:45:18.000000Z",
+		"updated_at": "2023-04-21T23:47:35.000000Z",
+		"user": {
+			"id": 1,
+			"first": "Raymond",
+			"last": "Lee",
+			"email": "raymond@gmail.com",
+			"email_verified_at": null,
+			"created_at": "2023-04-21T23:56:45.000000Z",
+			"updated_at": "2023-04-21T23:56:45.000000Z"
+		}
+	},
+	{
+		"id": 7,
+		"name": "Javascript",
+		"logo": "http://localhoststorage/skills/z3CXhuzcAcxbocg8rikDZzYuaMkOZJTt7Due6r1U.png",
+		"user_id": 1,
+		"created_at": "2023-04-21T23:45:23.000000Z",
+		"updated_at": "2023-04-21T23:47:40.000000Z",
+		"user": {
+			"id": 1,
+			"first": "Raymond",
+			"last": "Lee",
+			"email": "raymond@gmail.com",
+			"email_verified_at": null,
+			"created_at": "2023-04-21T23:56:45.000000Z",
+			"updated_at": "2023-04-21T23:56:45.000000Z"
+		}
+	},
+	{
+		"id": 8,
+		"name": "Python",
+		"logo": "http://localhoststorage/skills/5QjwwuC3yrm9zV4HllXApVplIoVOlYNb3BENu3Jd.png",
+		"user_id": 1,
+		"created_at": "2023-04-21T23:45:29.000000Z",
+		"updated_at": "2023-04-21T23:47:45.000000Z",
+		"user": {
+			"id": 1,
+			"first": "Raymond",
+			"last": "Lee",
+			"email": "raymond@gmail.com",
+			"email_verified_at": null,
+			"created_at": "2023-04-21T23:56:45.000000Z",
+			"updated_at": "2023-04-21T23:56:45.000000Z"
+		}
+	},
+	{
+		"id": 9,
+		"name": "MySQL",
+		"logo": "http://localhoststorage/skills/447krjbOpqG3dXbERtLi6vj3WM6Zj8trMOtN0XJE.png",
+		"user_id": 1,
+		"created_at": "2023-04-21T23:45:32.000000Z",
+		"updated_at": "2023-04-21T23:47:52.000000Z",
+		"user": {
+			"id": 1,
+			"first": "Raymond",
+			"last": "Lee",
+			"email": "raymond@gmail.com",
+			"email_verified_at": null,
+			"created_at": "2023-04-21T23:56:45.000000Z",
+			"updated_at": "2023-04-21T23:56:45.000000Z"
+		}
+	},
+	{
+		"id": 10,
+		"name": "ASP.NET",
+		"logo": "http://localhoststorage/skills/i18uXoilkJU4j7snXKDI2kX5thdsiAQatXaJfBc2.png",
+		"user_id": 1,
+		"created_at": "2023-04-21T23:45:37.000000Z",
+		"updated_at": "2023-04-21T23:48:02.000000Z",
+		"user": {
+			"id": 1,
+			"first": "Raymond",
+			"last": "Lee",
+			"email": "raymond@gmail.com",
+			"email_verified_at": null,
+			"created_at": "2023-04-21T23:56:45.000000Z",
+			"updated_at": "2023-04-21T23:56:45.000000Z"
+		}
+	},
+	{
+		"id": 11,
+		"name": "HTML",
+		"logo": "http://localhoststorage/skills/JOGzHWRGBPWoEMopF2EmZtGme25N6u067WK2hvHV.png",
+		"user_id": 1,
+		"created_at": "2023-04-21T23:45:40.000000Z",
+		"updated_at": "2023-04-21T23:48:07.000000Z",
+		"user": {
+			"id": 1,
+			"first": "Raymond",
+			"last": "Lee",
+			"email": "raymond@gmail.com",
+			"email_verified_at": null,
+			"created_at": "2023-04-21T23:56:45.000000Z",
+			"updated_at": "2023-04-21T23:56:45.000000Z"
+		}
+	},
+	{
+		"id": 12,
+		"name": "CSS",
+		"logo": "http://localhoststorage/skills/13RqpRUidPZVCxsR3wPQAzfioJ2qdzqP1aMrVm7p.png",
+		"user_id": 1,
+		"created_at": "2023-04-21T23:45:47.000000Z",
+		"updated_at": "2023-04-21T23:48:13.000000Z",
+		"user": {
+			"id": 1,
+			"first": "Raymond",
+			"last": "Lee",
+			"email": "raymond@gmail.com",
+			"email_verified_at": null,
+			"created_at": "2023-04-21T23:56:45.000000Z",
+			"updated_at": "2023-04-21T23:56:45.000000Z"
+		}
+	},
+	{
+		"id": 13,
+		"name": "Node.js",
+		"logo": "http://localhoststorage/skills/v1gwcqNAt7m4eqriLUX9J5Dm2V0EOVoZddcL6ovN.png",
+		"user_id": 1,
+		"created_at": "2023-04-21T23:45:51.000000Z",
+		"updated_at": "2023-04-21T23:52:05.000000Z",
+		"user": {
+			"id": 1,
+			"first": "Raymond",
+			"last": "Lee",
+			"email": "raymond@gmail.com",
+			"email_verified_at": null,
+			"created_at": "2023-04-21T23:56:45.000000Z",
+			"updated_at": "2023-04-21T23:56:45.000000Z"
+		}
+	},
+	{
+		"id": 14,
+		"name": "React.js",
+		"logo": "http://localhoststorage/skills/WlCclOq6PQ10ky6XXpMYyr8DSXUc1tcaKYk4wAQ3.png",
+		"user_id": 1,
+		"created_at": "2023-04-21T23:45:55.000000Z",
+		"updated_at": "2023-04-21T23:52:34.000000Z",
+		"user": {
+			"id": 1,
+			"first": "Raymond",
+			"last": "Lee",
+			"email": "raymond@gmail.com",
+			"email_verified_at": null,
+			"created_at": "2023-04-21T23:56:45.000000Z",
+			"updated_at": "2023-04-21T23:56:45.000000Z"
+		}
+	},
+	{
+		"id": 15,
+		"name": "PHP",
+		"logo": "http://localhoststorage/skills/NxwXVmr3jECARjnTxGITEfw2K8Fj09QheQGUYyc9.png",
+		"user_id": 1,
+		"created_at": "2023-04-21T23:46:01.000000Z",
+		"updated_at": "2023-04-21T23:52:56.000000Z",
+		"user": {
+			"id": 1,
+			"first": "Raymond",
+			"last": "Lee",
+			"email": "raymond@gmail.com",
+			"email_verified_at": null,
+			"created_at": "2023-04-21T23:56:45.000000Z",
+			"updated_at": "2023-04-21T23:56:45.000000Z"
+		}
+	}
+]

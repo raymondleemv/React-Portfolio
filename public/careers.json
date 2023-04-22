@@ -1,0 +1,270 @@
+[
+	{
+		"id": 12,
+		"career": "Bachelor\u2019s Degree, Electronic and Computer Engineering (Minor in Information Technology)",
+		"location": "Hong Kong University of Science and Technology",
+		"start_date": "2016-09-01",
+		"end_date": "2021-06-01",
+		"career_type_id": 3,
+		"user_id": 1,
+		"image": "http://localhoststorage/careers/KhsliYLrHuTbJZFB4WkuKhlNlzkzbOjFFbbwV3NC.png",
+		"created_at": "2023-04-21T23:44:35.000000Z",
+		"updated_at": "2023-04-22T01:42:42.000000Z",
+		"skills": [
+			{
+				"id": 5,
+				"name": "C++",
+				"logo": "skills/lSH92XaKhBDX9clhKMr7lskBQk1RXtPPTe9FPC36.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:14.000000Z",
+				"updated_at": "2023-04-21T23:47:24.000000Z",
+				"pivot": { "career_id": 12, "skill_id": 5 }
+			},
+			{
+				"id": 6,
+				"name": "C#",
+				"logo": "skills/kx6KTmurzHMy31GUDzOZYyKwTldPw8Kg7QhO6DGo.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:18.000000Z",
+				"updated_at": "2023-04-21T23:47:35.000000Z",
+				"pivot": { "career_id": 12, "skill_id": 6 }
+			}
+		],
+		"career_type": [
+			{
+				"id": 3,
+				"career_type": "Education",
+				"created_at": "2023-04-21T23:44:46.000000Z",
+				"updated_at": "2023-04-21T23:44:46.000000Z"
+			}
+		]
+	},
+	{
+		"id": 13,
+		"career": "Post-Graduate Certificate, Web Development",
+		"location": "Humber College",
+		"start_date": "2022-09-01",
+		"end_date": "2023-07-01",
+		"career_type_id": 3,
+		"user_id": 1,
+		"image": "http://localhoststorage/careers/ly5aB0drG8NcnTcEfsoWSDWfQZfqHeDE7tgUQRo4.png",
+		"created_at": "2023-04-22T01:40:45.000000Z",
+		"updated_at": "2023-04-22T01:42:49.000000Z",
+		"skills": [
+			{
+				"id": 6,
+				"name": "C#",
+				"logo": "skills/kx6KTmurzHMy31GUDzOZYyKwTldPw8Kg7QhO6DGo.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:18.000000Z",
+				"updated_at": "2023-04-21T23:47:35.000000Z",
+				"pivot": { "career_id": 13, "skill_id": 6 }
+			},
+			{
+				"id": 7,
+				"name": "Javascript",
+				"logo": "skills/z3CXhuzcAcxbocg8rikDZzYuaMkOZJTt7Due6r1U.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:23.000000Z",
+				"updated_at": "2023-04-21T23:47:40.000000Z",
+				"pivot": { "career_id": 13, "skill_id": 7 }
+			},
+			{
+				"id": 8,
+				"name": "Python",
+				"logo": "skills/5QjwwuC3yrm9zV4HllXApVplIoVOlYNb3BENu3Jd.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:29.000000Z",
+				"updated_at": "2023-04-21T23:47:45.000000Z",
+				"pivot": { "career_id": 13, "skill_id": 8 }
+			},
+			{
+				"id": 9,
+				"name": "MySQL",
+				"logo": "skills/447krjbOpqG3dXbERtLi6vj3WM6Zj8trMOtN0XJE.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:32.000000Z",
+				"updated_at": "2023-04-21T23:47:52.000000Z",
+				"pivot": { "career_id": 13, "skill_id": 9 }
+			},
+			{
+				"id": 10,
+				"name": "ASP.NET",
+				"logo": "skills/i18uXoilkJU4j7snXKDI2kX5thdsiAQatXaJfBc2.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:37.000000Z",
+				"updated_at": "2023-04-21T23:48:02.000000Z",
+				"pivot": { "career_id": 13, "skill_id": 10 }
+			},
+			{
+				"id": 11,
+				"name": "HTML",
+				"logo": "skills/JOGzHWRGBPWoEMopF2EmZtGme25N6u067WK2hvHV.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:40.000000Z",
+				"updated_at": "2023-04-21T23:48:07.000000Z",
+				"pivot": { "career_id": 13, "skill_id": 11 }
+			},
+			{
+				"id": 12,
+				"name": "CSS",
+				"logo": "skills/13RqpRUidPZVCxsR3wPQAzfioJ2qdzqP1aMrVm7p.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:47.000000Z",
+				"updated_at": "2023-04-21T23:48:13.000000Z",
+				"pivot": { "career_id": 13, "skill_id": 12 }
+			},
+			{
+				"id": 13,
+				"name": "Node.js",
+				"logo": "skills/v1gwcqNAt7m4eqriLUX9J5Dm2V0EOVoZddcL6ovN.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:51.000000Z",
+				"updated_at": "2023-04-21T23:52:05.000000Z",
+				"pivot": { "career_id": 13, "skill_id": 13 }
+			},
+			{
+				"id": 14,
+				"name": "React.js",
+				"logo": "skills/WlCclOq6PQ10ky6XXpMYyr8DSXUc1tcaKYk4wAQ3.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:55.000000Z",
+				"updated_at": "2023-04-21T23:52:34.000000Z",
+				"pivot": { "career_id": 13, "skill_id": 14 }
+			},
+			{
+				"id": 15,
+				"name": "PHP",
+				"logo": "skills/NxwXVmr3jECARjnTxGITEfw2K8Fj09QheQGUYyc9.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:46:01.000000Z",
+				"updated_at": "2023-04-21T23:52:56.000000Z",
+				"pivot": { "career_id": 13, "skill_id": 15 }
+			}
+		],
+		"career_type": [
+			{
+				"id": 3,
+				"career_type": "Education",
+				"created_at": "2023-04-21T23:44:46.000000Z",
+				"updated_at": "2023-04-21T23:44:46.000000Z"
+			}
+		]
+	},
+	{
+		"id": 14,
+		"career": "Embedded Software Engineer Intern",
+		"location": "ASM Pacific Technology Limited",
+		"start_date": "2019-06-01",
+		"end_date": "2020-06-01",
+		"career_type_id": 4,
+		"user_id": 1,
+		"image": "http://localhoststorage/careers/7zKtZSK0F5FQKzVB5u235gK9vRPPvjsqFDgbKnkn.png",
+		"created_at": "2023-04-22T01:41:16.000000Z",
+		"updated_at": "2023-04-22T01:42:55.000000Z",
+		"skills": [
+			{
+				"id": 5,
+				"name": "C++",
+				"logo": "skills/lSH92XaKhBDX9clhKMr7lskBQk1RXtPPTe9FPC36.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:14.000000Z",
+				"updated_at": "2023-04-21T23:47:24.000000Z",
+				"pivot": { "career_id": 14, "skill_id": 5 }
+			},
+			{
+				"id": 6,
+				"name": "C#",
+				"logo": "skills/kx6KTmurzHMy31GUDzOZYyKwTldPw8Kg7QhO6DGo.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:18.000000Z",
+				"updated_at": "2023-04-21T23:47:35.000000Z",
+				"pivot": { "career_id": 14, "skill_id": 6 }
+			}
+		],
+		"career_type": [
+			{
+				"id": 4,
+				"career_type": "Experience",
+				"created_at": "2023-04-21T23:44:50.000000Z",
+				"updated_at": "2023-04-21T23:44:50.000000Z"
+			}
+		]
+	},
+	{
+		"id": 15,
+		"career": "Embedded Software Engineer",
+		"location": "Gense Technologies Limited",
+		"start_date": "2021-07-01",
+		"end_date": "2022-07-01",
+		"career_type_id": 4,
+		"user_id": 1,
+		"image": "http://localhoststorage/careers/yptHH4N0EgcJe0FqVSs1pabK8p3FiJPO0Z5gOzh3.jpg",
+		"created_at": "2023-04-22T01:41:56.000000Z",
+		"updated_at": "2023-04-22T01:43:00.000000Z",
+		"skills": [
+			{
+				"id": 5,
+				"name": "C++",
+				"logo": "skills/lSH92XaKhBDX9clhKMr7lskBQk1RXtPPTe9FPC36.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:14.000000Z",
+				"updated_at": "2023-04-21T23:47:24.000000Z",
+				"pivot": { "career_id": 15, "skill_id": 5 }
+			},
+			{
+				"id": 7,
+				"name": "Javascript",
+				"logo": "skills/z3CXhuzcAcxbocg8rikDZzYuaMkOZJTt7Due6r1U.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:23.000000Z",
+				"updated_at": "2023-04-21T23:47:40.000000Z",
+				"pivot": { "career_id": 15, "skill_id": 7 }
+			},
+			{
+				"id": 11,
+				"name": "HTML",
+				"logo": "skills/JOGzHWRGBPWoEMopF2EmZtGme25N6u067WK2hvHV.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:40.000000Z",
+				"updated_at": "2023-04-21T23:48:07.000000Z",
+				"pivot": { "career_id": 15, "skill_id": 11 }
+			},
+			{
+				"id": 12,
+				"name": "CSS",
+				"logo": "skills/13RqpRUidPZVCxsR3wPQAzfioJ2qdzqP1aMrVm7p.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:47.000000Z",
+				"updated_at": "2023-04-21T23:48:13.000000Z",
+				"pivot": { "career_id": 15, "skill_id": 12 }
+			},
+			{
+				"id": 13,
+				"name": "Node.js",
+				"logo": "skills/v1gwcqNAt7m4eqriLUX9J5Dm2V0EOVoZddcL6ovN.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:51.000000Z",
+				"updated_at": "2023-04-21T23:52:05.000000Z",
+				"pivot": { "career_id": 15, "skill_id": 13 }
+			},
+			{
+				"id": 14,
+				"name": "React.js",
+				"logo": "skills/WlCclOq6PQ10ky6XXpMYyr8DSXUc1tcaKYk4wAQ3.png",
+				"user_id": 1,
+				"created_at": "2023-04-21T23:45:55.000000Z",
+				"updated_at": "2023-04-21T23:52:34.000000Z",
+				"pivot": { "career_id": 15, "skill_id": 14 }
+			}
+		],
+		"career_type": [
+			{
+				"id": 4,
+				"career_type": "Experience",
+				"created_at": "2023-04-21T23:44:50.000000Z",
+				"updated_at": "2023-04-21T23:44:50.000000Z"
+			}
+		]
+	}
+]

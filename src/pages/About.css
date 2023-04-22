@@ -1,0 +1,210 @@
+#about .section-subtitle {
+	margin-top: 0.5em;
+}
+
+#about .section-subtitle {
+	text-align: center;
+}
+
+.about-hover-cards-container {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 16px;
+}
+
+#about-education-hkust::before {
+	/* https://international-sustainable-campus-network.org/membership/the-hong-kong-university-of-science-and-technology/ */
+	background-image: url(../images/about/hkust.png);
+}
+
+#about-education-humber::before {
+	/* https://humber.ca/brand/humber-logo-sub-brand-logos */
+	background-image: url(../images/about/humber.png);
+}
+
+#about-experience-asmpt::before {
+	/* https://smt.asmpt.com/en/news-center/press/asm-pacific-technology-announces-2020-annual-results/ */
+	background-image: url(../images/about/asmpt.png);
+}
+
+#about-experience-gense::before {
+	/* https://www.linkedin.com/company/gensetech/?originalSubdomain=hk */
+	background-image: url(../images/about/gense.jpeg);
+}
+
+#about-self-portrait {
+	width: 200px;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+#about-content-intro {
+	min-width: 288px;
+	flex: 1 1 0;
+}
+
+#about-content {
+	margin-top: 60px;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+#about-content img:nth-child(3),
+#about-content > div {
+	min-width: 433px;
+	flex: 1 1 0;
+	max-width: 527px;
+}
+
+#about-buttons {
+	justify-content: space-between;
+	justify-self: center;
+}
+
+#about-work-button {
+	margin-top: 16px;
+}
+
+#about-contact-button {
+	margin-left: 32px;
+	margin-top: 16px;
+}
+
+@media screen and (max-width: 1366px) {
+	#read-more .separating-line {
+		margin-top: 24px;
+	}
+
+	#about,
+	#projects,
+	#skills {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	#about,
+	#projects {
+		padding-bottom: 85px;
+	}
+
+	#about-content img:nth-child(3),
+	#about-content > div {
+		flex: 1 1 0;
+		max-width: none;
+	}
+
+	#about-content img:nth-child(3) {
+		max-width: 600px;
+	}
+
+	#about-buttons {
+		flex-wrap: wrap;
+		column-gap: 32px;
+		justify-content: flex-start;
+	}
+
+	#about-buttons > a {
+		margin: 16px 0 0 0;
+	}
+
+	.projects-image {
+		width: 100%;
+		max-width: 424px;
+		justify-self: center;
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	.projects-image > * {
+		max-width: 424px;
+		width: 100% !important;
+	}
+
+	#skills-content-container {
+		grid-template-columns: 100%;
+		grid-row-gap: 32px;
+	}
+
+	#hard-skills-container {
+		grid-row: 2;
+		grid-column: 1;
+		justify-self: center;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	#projects-container {
+		flex-direction: column;
+	}
+
+	#projects-image-container {
+		aspect-ratio: 4 / 3;
+	}
+
+	#projects-container > * {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	header .github-logo {
+		margin-right: 0;
+	}
+
+	#hard-skills-container {
+		--hard-skills-width: 100px;
+		gap: 32px;
+	}
+
+	#contact {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	#contact-chatbox-container {
+		width: 100%;
+	}
+
+	#hero-text-name {
+		font-size: 48px;
+	}
+}
+
+@media screen and (max-width: 481px) {
+	#about {
+		padding-top: calc(var(--header-height, 0) + 50px);
+	}
+
+	#about-content {
+		margin-top: 32px;
+	}
+
+	.hover-card {
+		min-width: 288px;
+	}
+
+	#about {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	#about-content img:nth-child(3),
+	#about-content > div {
+		min-width: 288px;
+		flex: 1 1 0;
+		max-width: 420px;
+	}
+
+	#about-buttons {
+		grid-column-gap: 8px;
+	}
+
+	.button {
+		min-width: 120px;
+		padding: 8px 12px;
+	}
+}

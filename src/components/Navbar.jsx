@@ -1,6 +1,10 @@
 import './Navbar.css';
-
+import { navbarInit } from '../js/Portfolio';
+import { useEffect } from 'react';
 export default function Navbar() {
+	useEffect(() => {
+		navbarInit();
+	}, []);
 	return (
 		<nav>
 			<button className="dropdown-menu flex-center flex-column">

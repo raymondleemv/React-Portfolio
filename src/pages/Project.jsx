@@ -1,6 +1,7 @@
 import './Project.css';
 import { useEffect, useState } from 'react';
 import { getProjects } from '../data/database';
+import { projectInit } from '../js/Portfolio';
 
 export default function Project() {
 	const [data, setData] = useState([]);
@@ -11,6 +12,11 @@ export default function Project() {
 		};
 		getData();
 	}, []);
+
+	useEffect(() => {
+		projectInit();
+	}, [data]);
+
 	return (
 		<section id="projects">
 			<h2 className="section-title">Projects</h2>

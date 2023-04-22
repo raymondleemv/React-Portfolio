@@ -2,9 +2,13 @@ import jQuery from 'jquery';
 window.$ = jQuery;
 window.jQuery = jQuery;
 
+// window.onload = init;
+
 function projectInit() {
+	console.log('portfolio');
 	const projects = $('.project-description');
 	const projectImages = $('.project-image');
+	const hamburgerMenu = $('.dropdown-menu');
 	const projectDescriptionArrowBtns = $(
 		'#projects-description-arrows'
 	).children();
@@ -38,7 +42,11 @@ function projectInit() {
 
 	$(projectImages[0]).addClass('show');
 
-	projectDescriptionArrowBtns.off().click(async function () {
+	hamburgerMenu.click(function () {
+		hamburgerMenu.toggleClass('close');
+	});
+
+	projectDescriptionArrowBtns.click(async function () {
 		const currentProject = projects.filter('.show');
 		const currentProjectImage = projectImages.filter('.show');
 		let projectToShow =
@@ -60,12 +68,3 @@ function projectInit() {
 		projectDescriptionArrowBtns.css('pointer-events', 'auto');
 	});
 }
-
-function navbarInit() {
-	const hamburgerMenu = $('.dropdown-menu');
-	hamburgerMenu.click(function () {
-		hamburgerMenu.toggleClass('close');
-	});
-}
-
-export { projectInit, navbarInit };

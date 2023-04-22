@@ -7,6 +7,7 @@
 	font-size: 28px;
 	min-height: var(--min-height, 754px);
 	font-family: 'Playfair Display';
+	padding-top: var(--header-height, 0);
 }
 
 #home-content {
@@ -67,4 +68,45 @@
 	height: 32px;
 	margin-top: 0.857em;
 	transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1366px) {
+	#read-more .separating-line {
+		margin-top: 24px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#hero-text-name {
+		font-size: 48px;
+	}
+}
+
+@media screen and (max-width: 481px) {
+	#home-logo {
+		width: 120px;
+	}
+
+	#home,
+	#home > * {
+		--min-height: 450px;
+	}
+
+	#hero-text-name {
+		font-size: 24px;
+	}
+
+	#hero-text-intro {
+		font-size: 12px;
+	}
+
+	#tagline,
+	#read-more-text {
+		font-size: 16px;
+	}
+
+	#read-more-arrow {
+		width: 16px;
+		height: 16px;
+	}
 }

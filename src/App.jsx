@@ -1,6 +1,5 @@
 import './App.css';
 import './js/Portfolio';
-import '../styles/styles.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Project from './pages/Project';

@@ -1,3 +1,7 @@
+#skills {
+	padding-top: var(--header-height, 0);
+}
+
 #skills-content-container {
 	max-width: 1366px;
 	margin-top: 60px;
@@ -28,4 +32,56 @@
 .hard-skills-content p {
 	text-align: center;
 	font-size: 32px;
+}
+
+@media screen and (max-width: 1366px) {
+	#skills {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	#skills-content-container {
+		grid-template-columns: 100%;
+		grid-row-gap: 32px;
+	}
+
+	#hard-skills-container {
+		grid-row: 2;
+		grid-column: 1;
+		justify-self: center;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#hard-skills-container {
+		--hard-skills-width: 100px;
+		gap: 32px;
+	}
+}
+
+@media screen and (max-width: 481px) {
+	#skills {
+		padding-top: calc(var(--header-height, 0) + 50px);
+	}
+
+	#skills-content-container {
+		margin-top: 32px;
+	}
+
+	.hard-skills-content p {
+		font-size: 16px;
+	}
+
+	#skills {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	#hard-skills-container {
+		grid-template-columns: repeat(2, 100px);
+	}
+
+	#skills-content-container {
+		padding: 0 16px;
+	}
 }

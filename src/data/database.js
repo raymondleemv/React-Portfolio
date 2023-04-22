@@ -5,15 +5,15 @@ async function getData(url) {
 }
 
 async function getCareers() {
-	return await getData('http://localhost:5173/careers.json');
+	return await getData('/careers.json');
 }
 
 async function getProjects() {
-	return await getData('http://localhost:5173/projects.json');
+	return await getData('/projects.json');
 }
 
 async function getSkills() {
-	return await getData('http://localhost:5173/skills.json');
+	return await getData('/skills.json');
 }
 
 export { getCareers, getProjects, getSkills };

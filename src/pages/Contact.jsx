@@ -5,7 +5,7 @@ export default function Contact() {
 		e.preventDefault();
 		let form = document.querySelector('.contact-form');
 		const backendEmailEndpoint =
-			'https://portfolio-backend-git-deployment-testing-raymondleemv.vercel.app/api/email';
+			'https://portfolio-backend.raymondleemv.com/api/email';
 		const formData = new FormData(form);
 		fetch(backendEmailEndpoint, {
 			method: 'POST',
@@ -62,7 +62,7 @@ export default function Contact() {
 					</p>
 					<form
 						method="POST"
-						action="https://portfolio-backend-khaki-three.vercel.app/email"
+						action="https://portfolio-backend.raymondleemv.com/api/email"
 						className="contact-form"
 						onSubmit={(e) => submitHandler(e)}
 					>

@@ -24,7 +24,7 @@ export default function Skill() {
 							>
 								<img
 									alt={'This is the ' + skill.name + ' skill icon'}
-									src={'../../images' + skill.logo.split('localhoststorage')[1]}
+									src={skill.photo}
 								/>
 								<p>{skill.name}</p>
 							</div>

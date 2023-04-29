@@ -13,9 +13,9 @@ export default function About() {
 			let educationDataArr = [];
 			let experienceDataArr = [];
 			for (let career of json) {
-				if (career.career_type[0].career_type === 'Education') {
+				if (career.career_type === 'Education') {
 					educationDataArr.push(career);
-				} else if (career.career_type[0].career_type === 'Experience') {
+				} else if (career.career_type === 'Experience') {
 					experienceDataArr.push(career);
 				}
 			}
@@ -73,9 +73,7 @@ export default function About() {
 					return (
 						<HoverCard
 							key={'education ' + i}
-							src={
-								'../../images' + education.image.split('localhoststorage')[1]
-							}
+							src={education.photo}
 							info={checkCareerExtraInfo(education)}
 							location={education.location}
 							startYear={education.start_date.split('-')[0]}
@@ -91,9 +89,7 @@ export default function About() {
 					return (
 						<HoverCard
 							key={'experience ' + i}
-							src={
-								'../../images' + experience.image.split('localhoststorage')[1]
-							}
+							src={experience.photo}
 							info={checkCareerExtraInfo(experience)}
 							location={experience.location}
 							startYear={experience.start_date.split('-')[0]}

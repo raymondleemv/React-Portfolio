@@ -1,6 +1,16 @@
 import './Contact.css';
 
 export default function Contact() {
+	let submitHandler = function (e) {
+		e.preventDefault();
+		let form = document.querySelector('.contact-form');
+		const backendEmailEndpoint = 'http://localhost:3000/email';
+		const formData = new FormData(form);
+		fetch(backendEmailEndpoint, {
+			method: 'POST',
+			body: new URLSearchParams(formData),
+		});
+	};
 	return (
 		<section id="contact" className="flex-center flex-column">
 			<h2 className="section-title">Let's Chat!</h2>
@@ -8,7 +18,7 @@ export default function Contact() {
 				<div id="contact-chatbox-header">Send me a message!</div>
 				<div id="contact-chatbox-content-container">
 					<p className="contact-chatbox-content contact-chatbox-left">
-						If you are interested in my CV, you can download it
+						If you are interested in my CV, you can download it&nbsp;
 						<a href="CV/Resume_ManViewRaymondLee.pdf" download>
 							here
 						</a>
@@ -49,29 +59,38 @@ export default function Contact() {
 					<p className="contact-chatbox-content contact-chatbox-left">
 						Or you can also fill the contact form!
 					</p>
-					<form className="contact-form">
+					<form
+						method="POST"
+						action="https://portfolio-backend-khaki-three.vercel.app/email"
+						className="contact-form"
+						onSubmit={(e) => submitHandler(e)}
+					>
 						<div className="contact-chatbox-content contact-chatbox-right">
 							<input
 								className="contact-form__field contact-form__name"
 								placeholder="Name"
+								name="name"
 							/>
 						</div>
 						<div className="contact-chatbox-content contact-chatbox-right">
 							<input
 								className="contact-form__field contact-form__email"
 								placeholder="Email"
+								name="email"
 							/>
 						</div>
 						<div className="contact-chatbox-content contact-chatbox-right">
 							<input
 								className="contact-form__field contact-form__subject"
 								placeholder="Subject"
+								name="subject"
 							/>
 						</div>
 						<div className="contact-chatbox-content contact-chatbox-right">
 							<textarea
 								className="contact-form__field contact-form__message"
 								placeholder="Message"
+								name="message"
 							></textarea>
 						</div>
 						<button className="button contact-chatbox-right contact-form__submit">

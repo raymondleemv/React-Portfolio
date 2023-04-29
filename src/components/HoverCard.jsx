@@ -4,9 +4,9 @@ export default function HoverCard(props) {
 	let skills = '- ';
 	for (let i = 0; i < props.skills.length; ++i) {
 		if (i !== props.skills.length - 1) {
-			skills += props.skills[i].name + ' / ';
+			skills += props.skills[i] + ' / ';
 		} else {
-			skills += props.skills[i].name;
+			skills += props.skills[i];
 		}
 	}
 	skills += ' -';

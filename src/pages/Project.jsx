@@ -27,9 +27,7 @@ export default function Project() {
 							<img
 								key={'project image ' + i}
 								className="project-image"
-								src={
-									'../../images' + project.image.split('localhoststorage')[1]
-								}
+								src={project.photo}
 								alt={'This is the ' + project.title + ' project image'}
 							/>
 						);
@@ -52,7 +50,7 @@ export default function Project() {
 										<p>{project.content}</p>
 										<div className="project-description-links">
 											{project.url && (
-												<a className="button" href={project.github}>
+												<a className="button" href={project.url}>
 													Visit
 												</a>
 											)}

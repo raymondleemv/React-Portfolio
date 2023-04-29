@@ -4,12 +4,14 @@ export default function Contact() {
 	let submitHandler = function (e) {
 		e.preventDefault();
 		let form = document.querySelector('.contact-form');
-		const backendEmailEndpoint = 'http://localhost:3000/email';
+		const backendEmailEndpoint =
+			'https://portfolio-backend.raymondleemv.com/api/email';
 		const formData = new FormData(form);
 		fetch(backendEmailEndpoint, {
 			method: 'POST',
 			body: new URLSearchParams(formData),
 		});
+		alert('Message sent!');
 	};
 	return (
 		<section id="contact" className="flex-center flex-column">
@@ -61,7 +63,7 @@ export default function Contact() {
 					</p>
 					<form
 						method="POST"
-						action="https://portfolio-backend-khaki-three.vercel.app/email"
+						action="https://portfolio-backend.raymondleemv.com/api/email"
 						className="contact-form"
 						onSubmit={(e) => submitHandler(e)}
 					>
@@ -70,6 +72,7 @@ export default function Contact() {
 								className="contact-form__field contact-form__name"
 								placeholder="Name"
 								name="name"
+								required
 							/>
 						</div>
 						<div className="contact-chatbox-content contact-chatbox-right">
@@ -77,6 +80,7 @@ export default function Contact() {
 								className="contact-form__field contact-form__email"
 								placeholder="Email"
 								name="email"
+								required
 							/>
 						</div>
 						<div className="contact-chatbox-content contact-chatbox-right">
@@ -84,6 +88,7 @@ export default function Contact() {
 								className="contact-form__field contact-form__subject"
 								placeholder="Subject"
 								name="subject"
+								required
 							/>
 						</div>
 						<div className="contact-chatbox-content contact-chatbox-right">
@@ -91,6 +96,7 @@ export default function Contact() {
 								className="contact-form__field contact-form__message"
 								placeholder="Message"
 								name="message"
+								required
 							></textarea>
 						</div>
 						<button className="button contact-chatbox-right contact-form__submit">

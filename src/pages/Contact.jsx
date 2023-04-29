@@ -11,6 +11,7 @@ export default function Contact() {
 			method: 'POST',
 			body: new URLSearchParams(formData),
 		});
+		alert('Message sent!');
 	};
 	return (
 		<section id="contact" className="flex-center flex-column">
@@ -71,6 +72,7 @@ export default function Contact() {
 								className="contact-form__field contact-form__name"
 								placeholder="Name"
 								name="name"
+								required
 							/>
 						</div>
 						<div className="contact-chatbox-content contact-chatbox-right">
@@ -78,6 +80,7 @@ export default function Contact() {
 								className="contact-form__field contact-form__email"
 								placeholder="Email"
 								name="email"
+								required
 							/>
 						</div>
 						<div className="contact-chatbox-content contact-chatbox-right">
@@ -85,6 +88,7 @@ export default function Contact() {
 								className="contact-form__field contact-form__subject"
 								placeholder="Subject"
 								name="subject"
+								required
 							/>
 						</div>
 						<div className="contact-chatbox-content contact-chatbox-right">
@@ -92,6 +96,7 @@ export default function Contact() {
 								className="contact-form__field contact-form__message"
 								placeholder="Message"
 								name="message"
+								required
 							></textarea>
 						</div>
 						<button className="button contact-chatbox-right contact-form__submit">

@@ -50,7 +50,11 @@ export default function Project() {
 										<p>{project.content}</p>
 										<div className="project-description-links">
 											{project.url && (
-												<a className="button" href={project.url}>
+												<a
+													className="button"
+													href={project.url}
+													target="_blank"
+												>
 													Visit
 												</a>
 											)}

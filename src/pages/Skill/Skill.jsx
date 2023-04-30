@@ -1,6 +1,6 @@
 import './Skill.css';
 import { useState, useEffect } from 'react';
-import { getSkills } from '../data/database';
+import { getSkills } from '../../data/database';
 
 export default function Skill() {
 	const [data, setData] = useState([]);

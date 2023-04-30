@@ -1,7 +1,7 @@
 import './About.css';
-import HoverCard from '../components/HoverCard';
+import HoverCard from '../../components/HoverCard';
 import { useEffect, useState } from 'react';
-import { getCareers } from '../data/database';
+import { getCareers } from '../../data/database';
 
 export default function About() {
 	const [educationData, setEducationData] = useState([]);

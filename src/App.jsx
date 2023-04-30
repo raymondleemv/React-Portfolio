@@ -1,10 +1,10 @@
 import './App.css';
 import './js/Portfolio';
-import Home from './pages/Home';
-import About from './pages/About';
-import Project from './pages/Project';
-import Skill from './pages/Skill';
-import Contact from './pages/Contact';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Project from './pages/Project/Project';
+import Skill from './pages/Skill/Skill';
+import Contact from './pages/Contact/Contact';
 import Header from './components/Header';
 
 function App() {

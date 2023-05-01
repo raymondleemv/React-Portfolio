@@ -80,6 +80,7 @@ export default function Contact() {
 								className="contact-form__field contact-form__email"
 								placeholder="Email"
 								name="email"
+								type="email"
 								required
 							/>
 						</div>

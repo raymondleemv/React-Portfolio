@@ -1,26 +1,15 @@
 import './App.css';
-import './js/Portfolio';
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Project from './pages/Project/Project';
-import Skill from './pages/Skill/Skill';
-import Contact from './pages/Contact/Contact';
-import Header from './components/Header';
+import Login from './pages/CMS/Login';
+import Portfolio from './pages/Portfolio/Portfolio';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
 	return (
 		<div className="App">
-			<Header />
-			<main>
-				<Home />
-				<About />
-				<Project />
-				<Skill />
-				<Contact />
-			</main>
-			<footer>
-				<div>- &copy; 2022 Man View Raymond Lee. -</div>
-			</footer>
+			<Routes>
+				<Route path="/" element={<Portfolio />} />
+				<Route path="/login" element={<Login />} />
+			</Routes>
 		</div>
 	);
 }

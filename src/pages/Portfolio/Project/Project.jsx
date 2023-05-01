@@ -1,7 +1,7 @@
 import './Project.css';
 import { useEffect, useState } from 'react';
-import { getProjects } from '../../data/database';
-import { projectInit } from '../../js/Portfolio';
+import { getProjects } from '../../../data/database';
+import { projectInit } from '../../../js/Portfolio';
 
 export default function Project() {
 	const [data, setData] = useState([]);

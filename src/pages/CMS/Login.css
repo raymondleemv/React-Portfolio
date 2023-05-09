@@ -1,0 +1,12 @@
+.form {
+	width: fit-content;
+}
+
+.form__field {
+	display: flex;
+	justify-content: space-between;
+}
+
+.form__label {
+	padding-right: 8px;
+}

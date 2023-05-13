@@ -1,7 +1,35 @@
+// TODO: change to auth server url
+const authServerUrl = 'http://localhost:3001';
+
 async function getData(url) {
 	let response = fetch(url);
 	let apiData = await response;
 	return await apiData.json();
+}
+
+async function fetchAuthServer(url, data) {
+	let fetchOptions = {
+		method: 'POST',
+		credentials: 'include',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(data),
+	};
+	let response = await fetch(url, fetchOptions);
+	return response;
+}
+
+async function addProject(data) {
+	return await fetchAuthServer(`${authServerUrl}/projects/add`, data);
+}
+
+async function editProject(data) {
+	return await fetchAuthServer(`${authServerUrl}/projects/edit`, data);
+}
+
+async function deleteProject(data) {
+	return await fetchAuthServer(`${authServerUrl}/projects/delete`, data);
 }
 
 async function getCareers() {
@@ -22,4 +50,11 @@ async function getSkills() {
 	);
 }
 
-export { getCareers, getProjects, getSkills };
+export {
+	getCareers,
+	getProjects,
+	getSkills,
+	addProject,
+	deleteProject,
+	editProject,
+};

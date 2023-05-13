@@ -1,5 +1,5 @@
 /* 2. HEADER */
-header {
+#header {
 	background-color: var(--color-palette-800);
 	display: flex;
 	flex-direction: column;

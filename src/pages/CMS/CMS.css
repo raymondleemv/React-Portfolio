@@ -1,0 +1,51 @@
+.cms {
+	--size-xl: 32px;
+	--size-l: 28px;
+	--size-m: 20px;
+	--size-s: 16px;
+	--size-xs: 12px;
+	--white-100: #faffff;
+	--white-200: #edf2fb;
+	--white-300: #e2eafc;
+	--white-400: #ccdbfd;
+	--blue-100: #4361ee;
+	--blue-200: #3f37c9;
+	--red: #ef476f;
+	--gray-100: #979dac;
+	--gray-200: #5c677d;
+	--gray-300: #33415c;
+	background-color: white;
+	color: var(--gray-300);
+	min-height: 100vh;
+	font-family: 'Manrope', sans-serif;
+}
+
+.cms-form {
+	width: fit-content;
+}
+
+.cms-form__field {
+	margin: 8px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.cms-form__label {
+	padding-right: 8px;
+}
+
+.cms-form__field input,
+.cms-form__field textarea {
+	background-color: var(--white-200);
+	padding: 1em;
+	width: 200px;
+}
+
+.cms__button {
+	font-size: 16px;
+	display: inline-block;
+	background-color: var(--white-200);
+	padding: 0.5em;
+	border-radius: 10px;
+	align-self: start;
+}

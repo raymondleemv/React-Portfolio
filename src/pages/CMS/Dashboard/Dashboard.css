@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap');
+
+.dashboard {
+	display: flex;
+	--size-xl: 32px;
+	--size-l: 28px;
+	--size-m: 20px;
+	--size-s: 16px;
+	--size-xs: 12px;
+	--white-100: #faffff;
+	--white-200: #edf2fb;
+	--white-300: #e2eafc;
+	--white-400: #ccdbfd;
+	--blue-100: #4361ee;
+	--blue-200: #3f37c9;
+	--red: #ef476f;
+	--gray-100: #979dac;
+	--gray-200: #5c677d;
+	--gray-300: #33415c;
+	background-color: white;
+	color: var(--gray-300);
+}
+
+.dashboard__header {
+	height: 100vh;
+	width: 200px;
+	min-width: 200px;
+	background-color: var(--white-200);
+}
+
+.dashboard__icon {
+	width: 1em;
+	margin-right: 0.5em;
+	color: var(--blue-200);
+}
+
+.dashboard__link,
+.dashboard__link:link,
+.dashboard__link:visited {
+	font-size: 16px;
+	font-family: 'Manrope', sans-serif;
+	font-weight: 500;
+	color: var(--gray-200);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.dashboard__link:hover,
+button:hover {
+	color: var(--blue-200);
+}
+
+.dashboard__header li {
+	padding: 0.5em 1em;
+}
+
+.dashboard__table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 0.5em 0;
+}
+
+.dashboard__table td,
+.dashboard__table th {
+	padding: 8px;
+	vertical-align: middle;
+}
+
+.dashboard__table tr:nth-child(even) {
+	background-color: var(--white-200);
+}
+.dashboard__table tr:nth-child(odd) {
+	background-color: var(--white-100);
+}
+
+.dashboard__table tr:hover {
+	background-color: var(--white-400);
+}
+
+.dashboard__table th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: var(--blue-100);
+	color: var(--white-100);
+}
+
+.dashboard__image {
+	width: 200px;
+}
+
+.dashboard__main {
+	font-size: 16px;
+	font-family: 'Manrope', sans-serif;
+	padding: 20px;
+	width: 100%;
+}
+
+.dashboard__button {
+	font-size: 16px;
+	display: inline-block;
+	background-color: var(--white-200);
+	padding: 0.5em;
+	border-radius: 10px;
+	align-self: start;
+}

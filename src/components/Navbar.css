@@ -1,11 +1,11 @@
-/* 2b. Navbar */
-nav a {
+/* 2b. #header navbar */
+#header nav a {
 	color: var(--color-palette-200);
 	font: 24px Asap;
 	text-align: center;
 }
 
-nav a:hover {
+#header nav a:hover {
 	color: var(--color-palette-50);
 	transition: 0.3s;
 }
@@ -14,7 +14,7 @@ nav a:hover {
 	display: block !important;
 }
 
-nav ul {
+#header nav ul {
 	display: none;
 	position: absolute;
 	top: 100%;
@@ -25,11 +25,11 @@ nav ul {
 	list-style: none;
 }
 
-nav ul li {
+#header nav ul li {
 	text-align: center;
 }
 
-nav ul li:not(:first-child) {
+#header nav ul li:not(:first-child) {
 	margin-top: 16px;
 	text-align: center;
 }

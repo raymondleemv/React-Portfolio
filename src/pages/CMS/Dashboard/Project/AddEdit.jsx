@@ -1,5 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useLocation } from 'react-router-dom';
 import { addProject, editProject } from '../../../../data/database.js';
 import { useNavigate } from 'react-router-dom';
 

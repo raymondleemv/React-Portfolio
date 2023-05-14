@@ -1,5 +1,4 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { addSkill, editSkill } from '../../../../data/database.js';
 
 export default function SkillAddEditForm(props) {

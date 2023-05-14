@@ -1,6 +1,4 @@
 import './App.css';
-import Login from './pages/CMS/Login/Login';
-import Dashboard from './pages/CMS/Dashboard/Dashboard';
 import Portfolio from './pages/Portfolio/Portfolio';
 import { Routes, Route } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';

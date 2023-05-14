@@ -8,7 +8,7 @@ import CMSCareer from './Career/Career';
 import CareerAddEditForm from './Career/AddEdit';
 import CMSSkill from './Skill/Skill';
 import SkillAddEditForm from './Skill/AddEdit';
-import Login from '../Login/Login';
+import Login from './Login/Login';
 
 export default function Dashboard() {
 	const [loggedIn, setLoggedIn] = useState(false);

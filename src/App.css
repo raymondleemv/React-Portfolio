@@ -94,6 +94,9 @@ body {
 	color: var(--color-palette-50);
 }
 
+button {
+	cursor: pointer;
+}
 /* 2a. Logo */
 #home-logo {
 	background-image: url(../images/header/logo.png);

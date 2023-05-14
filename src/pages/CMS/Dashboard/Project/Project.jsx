@@ -74,6 +74,10 @@ export default function CMSProject() {
 											state={{ project: project }}
 											to="/cms/dashboard/projects/edit"
 										>
+											<FontAwesomeIcon
+												icon="fa-solid fa-pen"
+												className="dashboard__icon"
+											/>
 											Edit
 										</Link>
 									</td>
@@ -82,6 +86,10 @@ export default function CMSProject() {
 											className="cms__button"
 											onClick={() => deleteProjectHandler(project)}
 										>
+											<FontAwesomeIcon
+												icon="fa-solid fa-trash"
+												className="dashboard__icon"
+											/>
 											Delete
 										</button>
 									</td>

@@ -39,15 +39,15 @@ async function getCareers() {
 }
 
 async function addCareer(data) {
-	return await fetchAuthServer(`${authServerUrl}/careers/add`, data);
+	return await fetchAuthServer(`${authServerUrl}/skills/add`, data);
 }
 
 async function editCareer(data) {
-	return await fetchAuthServer(`${authServerUrl}/careers/edit`, data);
+	return await fetchAuthServer(`${authServerUrl}/skills/edit`, data);
 }
 
 async function deleteCareer(data) {
-	return await fetchAuthServer(`${authServerUrl}/careers/delete`, data);
+	return await fetchAuthServer(`${authServerUrl}/skills/delete`, data);
 }
 
 async function getProjects() {
@@ -62,6 +62,18 @@ async function getSkills() {
 	);
 }
 
+async function addSkill(data) {
+	return await fetchAuthServer(`${authServerUrl}/skills/add`, data);
+}
+
+async function editSkill(data) {
+	return await fetchAuthServer(`${authServerUrl}/skills/edit`, data);
+}
+
+async function deleteSkill(data) {
+	return await fetchAuthServer(`${authServerUrl}/skills/delete`, data);
+}
+
 export {
 	getCareers,
 	getProjects,
@@ -72,4 +84,7 @@ export {
 	addCareer,
 	deleteCareer,
 	editCareer,
+	addSkill,
+	deleteSkill,
+	editSkill,
 };

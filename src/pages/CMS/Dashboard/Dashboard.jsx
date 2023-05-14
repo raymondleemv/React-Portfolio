@@ -1,11 +1,13 @@
 import './Dashboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
 import CMSProject from './Project/Project';
 import ProjectAddEditForm from './Project/AddEdit';
-import CareerAddEditForm from './Career/AddEdit';
-import { Routes, Route } from 'react-router-dom';
 import CMSCareer from './Career/Career';
+import CareerAddEditForm from './Career/AddEdit';
+import CMSSkill from './Skill/Skill';
+import SkillAddEditForm from './Skill/AddEdit';
+
 export default function Dashboard() {
 	return (
 		<div className="dashboard">
@@ -72,6 +74,14 @@ export default function Dashboard() {
 						<Route
 							path="edit"
 							element={<CareerAddEditForm add={false} />}
+						></Route>
+					</Route>
+					<Route path="/skills">
+						<Route index element={<CMSSkill />}></Route>
+						<Route path="add" element={<SkillAddEditForm add={true} />}></Route>
+						<Route
+							path="edit"
+							element={<SkillAddEditForm add={false} />}
 						></Route>
 					</Route>
 					<Route path="*" element={<h1>Not Found</h1>}></Route>

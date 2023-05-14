@@ -1,19 +1,19 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { getCareers, deleteCareer } from '../../../../data/database';
+import { getSkills, deleteSkill } from '../../../../data/database';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Loading from '../../../../components/Loading';
+import './Skill.css';
 
-export default function CMSCareer() {
+export default function CMSSkill() {
 	const [data, setData] = useState([]);
 	const [status, setStatus] = useState('');
 	const location = useLocation();
 
-	console.log(status);
 	useEffect(() => {
 		const getData = async () => {
-			let careers = await getCareers();
-			setData(careers);
+			let skills = await getSkills();
+			setData(skills);
 		};
 		getData();
 		if (location.state) {
@@ -22,14 +22,14 @@ export default function CMSCareer() {
 		}
 	}, [status]);
 
-	let deleteCareerHandler = async (career) => {
+	let deleteSkillHandler = async (skill) => {
 		let data = {
-			_id: career._id,
+			_id: skill._id,
 		};
-		let response = await deleteCareer(data);
+		let response = await deleteSkill(data);
 		console.log(await response.text());
 		if (response.status === 200) {
-			setStatus(`The ${career.career} career has been deleted.`);
+			setStatus(`The ${skill.name} skill has been deleted.`);
 		} else {
 			setStatus(await response.text());
 		}
@@ -37,45 +37,35 @@ export default function CMSCareer() {
 
 	return (
 		<>
-			<h1>Manage Careers</h1>
+			<h1>Manage Skills</h1>
 			{data.length === 0 && <Loading />}
 			{status && <p>{status}</p>}
 			<table className="dashboard__table">
 				<tbody>
 					<tr>
 						<th></th>
-						<th>Career</th>
-						<th>Location</th>
-						<th>Start Date</th>
-						<th>End Date</th>
-						<th>Career Type</th>
-						<th>Skills</th>
+						<th>Name</th>
 						<th></th>
 						<th></th>
 					</tr>
-					{data.map((career, i) => {
+					{data.map((skill, i) => {
 						return (
 							<>
 								<tr>
 									<td>
 										<img
-											key={'career image ' + i}
-											className="dashboard__image"
-											src={career.photo}
-											alt={'This is the ' + career.career + ' career image'}
+											key={'skill image ' + i}
+											className="dashboard__image skill-image"
+											src={skill.photo}
+											alt={'This is the ' + skill.name + ' skill image'}
 										/>
 									</td>
-									<td>{career.career}</td>
-									<td>{career.location}</td>
-									<td>{career.start_date}</td>
-									<td>{career.end_date}</td>
-									<td>{career.career_type}</td>
-									<td>{career.skills.join(' / ')}</td>
+									<td>{skill.name}</td>
 									<td>
 										<Link
 											className="dashboard__link"
-											state={{ career: career }}
-											to="/cms/dashboard/careers/edit"
+											state={{ skill: skill }}
+											to="/cms/dashboard/skills/edit"
 										>
 											<FontAwesomeIcon
 												icon="fa-solid fa-pen"
@@ -87,7 +77,7 @@ export default function CMSCareer() {
 									<td>
 										<button
 											className="cms__button"
-											onClick={() => deleteCareerHandler(career)}
+											onClick={() => deleteSkillHandler(skill)}
 										>
 											<FontAwesomeIcon
 												icon="fa-solid fa-trash"
@@ -103,14 +93,14 @@ export default function CMSCareer() {
 				</tbody>
 			</table>
 			<Link
-				to="/cms/dashboard/careers/add"
+				to="/cms/dashboard/skills/add"
 				className="dashboard__link dashboard__button"
 			>
 				<FontAwesomeIcon
 					icon="fa-solid fa-circle-plus"
 					className="dashboard__icon"
 				/>
-				New Career
+				New Skill
 			</Link>
 		</>
 	);

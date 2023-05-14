@@ -36,7 +36,8 @@
 
 .dashboard__link,
 .dashboard__link:link,
-.dashboard__link:visited {
+.dashboard__link:visited,
+.cms__button.dashboard__header-button {
 	font-size: 16px;
 	font-family: 'Manrope', sans-serif;
 	font-weight: 500;
@@ -47,7 +48,7 @@
 
 .dashboard__link:hover,
 button:hover {
-	color: var(--blue-200);
+	color: var(--blue-200) !important;
 }
 
 .dashboard__header li {
@@ -103,4 +104,17 @@ button:hover {
 	padding: 0.5em;
 	border-radius: 10px;
 	align-self: start;
+}
+
+.cms__button.dashboard__header-button {
+	padding: 0;
+	border-radius: 0;
+}
+
+.dashboard__user {
+	background-color: var(--blue-200);
+	color: var(--white-100);
+	padding: 1em;
+	font-size: 20px;
+	text-align: center;
 }

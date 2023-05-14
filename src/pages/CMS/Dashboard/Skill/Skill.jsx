@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getSkills, deleteSkill } from '../../../../data/database';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Loading from '../../../../components/Loading';
 import './Skill.css';
 
-export default function CMSSkill() {
+export default function CMSSkill(props) {
 	const [data, setData] = useState([]);
-	const [status, setStatus] = useState('');
-	const location = useLocation();
 
 	useEffect(() => {
 		const getData = async () => {
@@ -16,11 +14,7 @@ export default function CMSSkill() {
 			setData(skills);
 		};
 		getData();
-		if (location.state) {
-			setStatus(location.state.message);
-			location.state = null;
-		}
-	}, [status]);
+	}, [props.status]);
 
 	let deleteSkillHandler = async (skill) => {
 		let data = {
@@ -29,9 +23,9 @@ export default function CMSSkill() {
 		let response = await deleteSkill(data);
 		console.log(await response.text());
 		if (response.status === 200) {
-			setStatus(`The ${skill.name} skill has been deleted.`);
+			props.setStatus(`The ${skill.name} skill has been deleted.`);
 		} else {
-			setStatus(await response.text());
+			props.setStatus(await response.text());
 		}
 	};
 
@@ -39,7 +33,7 @@ export default function CMSSkill() {
 		<>
 			<h1>Manage Skills</h1>
 			{data.length === 0 && <Loading />}
-			{status && <p>{status}</p>}
+			{props.status && <p>{props.status}</p>}
 			<table className="dashboard__table">
 				<tbody>
 					<tr>

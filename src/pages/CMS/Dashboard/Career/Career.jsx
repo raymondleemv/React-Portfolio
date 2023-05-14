@@ -1,37 +1,29 @@
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getCareers, deleteCareer } from '../../../../data/database';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Loading from '../../../../components/Loading';
 
-export default function CMSCareer() {
+export default function CMSCareer(props) {
 	const [data, setData] = useState([]);
-	const [status, setStatus] = useState('');
-	const location = useLocation();
 
-	console.log(status);
 	useEffect(() => {
 		const getData = async () => {
 			let careers = await getCareers();
 			setData(careers);
 		};
 		getData();
-		if (location.state) {
-			setStatus(location.state.message);
-			location.state = null;
-		}
-	}, [status]);
+	}, [props.status]);
 
 	let deleteCareerHandler = async (career) => {
 		let data = {
 			_id: career._id,
 		};
 		let response = await deleteCareer(data);
-		console.log(await response.text());
 		if (response.status === 200) {
-			setStatus(`The ${career.career} career has been deleted.`);
+			props.setStatus(`The ${career.career} career has been deleted.`);
 		} else {
-			setStatus(await response.text());
+			props.setStatus(await response.text());
 		}
 	};
 
@@ -39,7 +31,7 @@ export default function CMSCareer() {
 		<>
 			<h1>Manage Careers</h1>
 			{data.length === 0 && <Loading />}
-			{status && <p>{status}</p>}
+			{props.status && <p>{props.status}</p>}
 			<table className="dashboard__table">
 				<tbody>
 					<tr>

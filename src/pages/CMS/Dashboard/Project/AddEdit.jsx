@@ -21,10 +21,9 @@ export default function ProjectAddEditForm(props) {
 		// fetch status is OK, redirect to CMS main page
 		if (response.status === 200) {
 			// TODO: change to CMS main page route
-			navigate('/cms/dashboard/projects', {
-				state: { message: message },
-			});
+			navigate('/cms/dashboard/projects');
 		}
+		props.setStatus(message);
 	};
 	return (
 		<>

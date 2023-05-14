@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function Login() {
+export default function Login(props) {
 	const navigate = useNavigate();
 
 	let submitHandler = async function (e) {
@@ -18,11 +19,12 @@ export default function Login() {
 		// fetch status is OK, redirect to CMS main page
 		if (response.status === 200) {
 			// TODO: change to CMS main page route
+			props.setLoggedIn(true);
 			navigate('/cms/dashboard');
 		}
 	};
 	return (
-		<div>
+		<>
 			<h1>Login Page for CMS</h1>
 			<form
 				className="cms-form"
@@ -44,9 +46,13 @@ export default function Login() {
 					<input type="password" name="password" />
 				</div>
 				<button className="cms__button" type="submit">
+					<FontAwesomeIcon
+						icon="fa-solid fa-paper-plane"
+						className="dashboard__icon"
+					/>
 					Submit
 				</button>
 			</form>
-		</div>
+		</>
 	);
 }

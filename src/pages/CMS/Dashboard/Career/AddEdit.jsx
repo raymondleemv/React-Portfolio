@@ -11,7 +11,6 @@ export default function CareerAddEditForm(props) {
 	useEffect(() => {
 		const getData = async () => {
 			let skills = await getSkills();
-			console.log(skills[0].name);
 			setData(skills);
 		};
 		getData();
@@ -40,10 +39,9 @@ export default function CareerAddEditForm(props) {
 		// fetch status is OK, redirect to CMS main page
 		if (response.status === 200) {
 			// TODO: change to CMS main page route
-			navigate('/cms/dashboard/careers', {
-				state: { message: message },
-			});
+			navigate('/cms/dashboard/careers');
 		}
+		props.setStatus(message);
 	};
 	return (
 		<>

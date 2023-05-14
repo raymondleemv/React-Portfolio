@@ -1,25 +1,18 @@
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getProjects, deleteProject } from '../../../../data/database';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Loading from '../../../../components/Loading';
 
-export default function CMSProject() {
+export default function CMSProject(props) {
 	const [data, setData] = useState([]);
-	const [status, setStatus] = useState('');
-	const location = useLocation();
-	console.log(location.state);
 	useEffect(() => {
 		const getData = async () => {
 			let projects = await getProjects();
 			setData(projects);
 		};
 		getData();
-		if (location.state) {
-			setStatus(location.state.message);
-			location.state = null;
-		}
-	}, [status]);
+	}, [props.status]);
 
 	let deleteProjectHandler = async (project) => {
 		let data = {
@@ -28,9 +21,9 @@ export default function CMSProject() {
 		let response = await deleteProject(data);
 		console.log(await response.text());
 		if (response.status === 200) {
-			setStatus(`The ${project.title} project has been deleted.`);
+			props.setStatus(`The ${project.title} project has been deleted.`);
 		} else {
-			setStatus(await response.text());
+			props.setStatus(await response.text());
 		}
 	};
 
@@ -38,7 +31,7 @@ export default function CMSProject() {
 		<>
 			<h1>Manage Projects</h1>
 			{data.length === 0 && <Loading />}
-			{status && <p>{status}</p>}
+			{props.status && <p>{props.status}</p>}
 			<table className="dashboard__table">
 				<tbody>
 					<tr>

@@ -22,10 +22,9 @@ export default function SkillAddEditForm(props) {
 		// fetch status is OK, redirect to CMS main page
 		if (response.status === 200) {
 			// TODO: change to CMS main page route
-			navigate('/cms/dashboard/skills', {
-				state: { message: message },
-			});
+			navigate('/cms/dashboard/skills');
 		}
+		props.setStatus(message);
 	};
 
 	return (

@@ -39,15 +39,15 @@ async function getCareers() {
 }
 
 async function addCareer(data) {
-	return await fetchAuthServer(`${authServerUrl}/skills/add`, data);
+	return await fetchAuthServer(`${authServerUrl}/careers/add`, data);
 }
 
 async function editCareer(data) {
-	return await fetchAuthServer(`${authServerUrl}/skills/edit`, data);
+	return await fetchAuthServer(`${authServerUrl}/careers/edit`, data);
 }
 
 async function deleteCareer(data) {
-	return await fetchAuthServer(`${authServerUrl}/skills/delete`, data);
+	return await fetchAuthServer(`${authServerUrl}/careers/delete`, data);
 }
 
 async function getProjects() {

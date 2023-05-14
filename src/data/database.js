@@ -38,6 +38,18 @@ async function getCareers() {
 	);
 }
 
+async function addCareer(data) {
+	return await fetchAuthServer(`${authServerUrl}/careers/add`, data);
+}
+
+async function editCareer(data) {
+	return await fetchAuthServer(`${authServerUrl}/careers/edit`, data);
+}
+
+async function deleteCareer(data) {
+	return await fetchAuthServer(`${authServerUrl}/careers/delete`, data);
+}
+
 async function getProjects() {
 	return await getData(
 		'https://portfolio-backend-khaki-three.vercel.app/api/projects'
@@ -57,4 +69,7 @@ export {
 	addProject,
 	deleteProject,
 	editProject,
+	addCareer,
+	deleteCareer,
+	editCareer,
 };

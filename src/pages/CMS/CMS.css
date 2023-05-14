@@ -34,8 +34,9 @@
 	padding-right: 8px;
 }
 
-.cms-form__field input,
-.cms-form__field textarea {
+.cms-form__field input:not([type='checkbox']),
+.cms-form__field textarea,
+.cms-form__field select {
 	background-color: var(--white-200);
 	padding: 1em;
 	width: 200px;
@@ -48,4 +49,14 @@
 	padding: 0.5em;
 	border-radius: 10px;
 	align-self: start;
+}
+
+.cms-form__checkbox-container {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1000;
+}
+
+.cms-form__checkbox {
+	margin: 8px;
 }

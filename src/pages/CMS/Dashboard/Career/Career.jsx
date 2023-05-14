@@ -1,18 +1,19 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { getProjects, deleteProject } from '../../../../data/database';
+import { getCareers, deleteCareer } from '../../../../data/database';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Loading from '../../../../components/Loading';
 
-export default function CMSProject() {
+export default function CMSCareer() {
 	const [data, setData] = useState([]);
 	const [status, setStatus] = useState('');
 	const location = useLocation();
-	console.log(location.state);
+
+	console.log(status);
 	useEffect(() => {
 		const getData = async () => {
-			let projects = await getProjects();
-			setData(projects);
+			let careers = await getCareers();
+			setData(careers);
 		};
 		getData();
 		if (location.state) {
@@ -21,14 +22,14 @@ export default function CMSProject() {
 		}
 	}, [status]);
 
-	let deleteProjectHandler = async (project) => {
+	let deleteCareerHandler = async (career) => {
 		let data = {
-			_id: project._id,
+			_id: career._id,
 		};
-		let response = await deleteProject(data);
+		let response = await deleteCareer(data);
 		console.log(await response.text());
 		if (response.status === 200) {
-			setStatus(`The ${project.title} project has been deleted.`);
+			setStatus(`The ${career.career} career has been deleted.`);
 		} else {
 			setStatus(await response.text());
 		}
@@ -36,43 +37,45 @@ export default function CMSProject() {
 
 	return (
 		<>
-			<h1>Manage Projects</h1>
+			<h1>Manage Careers</h1>
 			{data.length === 0 && <Loading />}
 			{status && <p>{status}</p>}
 			<table className="dashboard__table">
 				<tbody>
 					<tr>
 						<th></th>
-						<th>Title</th>
-						<th></th>
+						<th>Career</th>
+						<th>Location</th>
+						<th>Start Date</th>
+						<th>End Date</th>
+						<th>Career Type</th>
+						<th>Skills</th>
 						<th></th>
 						<th></th>
 					</tr>
-					{data.map((project, i) => {
+					{data.map((career, i) => {
 						return (
 							<>
 								<tr>
 									<td>
 										<img
-											key={'project image ' + i}
+											key={'career image ' + i}
 											className="dashboard__image"
-											src={project.photo}
-											alt={'This is the ' + project.title + ' project image'}
+											src={career.photo}
+											alt={'This is the ' + career.title + ' career image'}
 										/>
 									</td>
-									<td>
-										<Link className="dashboard__link" to={project.url}>
-											{project.title}
-										</Link>
-									</td>
-									<td>
-										<Link className="dashboard__link">Image</Link>
-									</td>
+									<td>{career.career}</td>
+									<td>{career.location}</td>
+									<td>{career.start_date}</td>
+									<td>{career.end_date}</td>
+									<td>{career.career_type}</td>
+									<td>{career.skills.join(' / ')}</td>
 									<td>
 										<Link
 											className="dashboard__link"
-											state={{ project: project }}
-											to="/cms/dashboard/projects/edit"
+											state={{ career: career }}
+											to="/cms/dashboard/careers/edit"
 										>
 											Edit
 										</Link>
@@ -80,7 +83,7 @@ export default function CMSProject() {
 									<td>
 										<button
 											className="cms__button"
-											onClick={() => deleteProjectHandler(project)}
+											onClick={() => deleteCareerHandler(career)}
 										>
 											Delete
 										</button>
@@ -92,14 +95,14 @@ export default function CMSProject() {
 				</tbody>
 			</table>
 			<Link
-				to="/cms/dashboard/projects/add"
+				to="/cms/dashboard/careers/add"
 				className="dashboard__link dashboard__button"
 			>
 				<FontAwesomeIcon
 					icon="fa-solid fa-circle-plus"
 					className="dashboard__icon"
 				/>
-				New Project
+				New Career
 			</Link>
 		</>
 	);

@@ -113,7 +113,6 @@ export default function CareerAddEditForm(props) {
 				<div className="cms-form__field">
 					<label className="cms-form__label">Skills:</label>
 					<div className="cms-form__checkbox-container">
-						{console.log(data)}
 						{data.map((skill) => {
 							return (
 								<label>
@@ -131,6 +130,7 @@ export default function CareerAddEditForm(props) {
 					</div>
 				</div>
 				<button type="submit" className="cms__button">
+					{props.add ? props.addIcon : props.editIcon}
 					{props.add ? 'New' : 'Edit'} Career
 				</button>
 			</form>

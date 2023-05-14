@@ -43,6 +43,7 @@ export default function SkillAddEditForm(props) {
 					<input name="name" defaultValue={location.state?.skill.name}></input>
 				</div>
 				<button type="submit" className="cms__button">
+					{props.add ? props.addIcon : props.editIcon}
 					{props.add ? 'New' : 'Edit'} Skill
 				</button>
 			</form>

@@ -9,6 +9,15 @@ import CMSSkill from './Skill/Skill';
 import SkillAddEditForm from './Skill/AddEdit';
 
 export default function Dashboard() {
+	let addIcon = (
+		<FontAwesomeIcon
+			icon="fa-solid fa-circle-plus"
+			className="dashboard__icon"
+		/>
+	);
+	let editIcon = (
+		<FontAwesomeIcon icon="fa-solid fa-pen" className="dashboard__icon" />
+	);
 	return (
 		<div className="dashboard">
 			<header className="dashboard__header">
@@ -58,30 +67,33 @@ export default function Dashboard() {
 						<Route index element={<CMSProject />}></Route>
 						<Route
 							path="add"
-							element={<ProjectAddEditForm add={true} />}
+							element={<ProjectAddEditForm add={true} addIcon={addIcon} />}
 						></Route>
 						<Route
 							path="edit"
-							element={<ProjectAddEditForm add={false} />}
+							element={<ProjectAddEditForm add={false} editIcon={editIcon} />}
 						></Route>
 					</Route>
 					<Route path="/careers">
 						<Route index element={<CMSCareer />}></Route>
 						<Route
 							path="add"
-							element={<CareerAddEditForm add={true} />}
+							element={<CareerAddEditForm add={true} addIcon={addIcon} />}
 						></Route>
 						<Route
 							path="edit"
-							element={<CareerAddEditForm add={false} />}
+							element={<CareerAddEditForm add={false} editIcon={editIcon} />}
 						></Route>
 					</Route>
 					<Route path="/skills">
 						<Route index element={<CMSSkill />}></Route>
-						<Route path="add" element={<SkillAddEditForm add={true} />}></Route>
+						<Route
+							path="add"
+							element={<SkillAddEditForm add={true} addIcon={addIcon} />}
+						></Route>
 						<Route
 							path="edit"
-							element={<SkillAddEditForm add={false} />}
+							element={<SkillAddEditForm add={false} editIcon={editIcon} />}
 						></Route>
 					</Route>
 					<Route path="*" element={<h1>Not Found</h1>}></Route>

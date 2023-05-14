@@ -86,7 +86,7 @@ export default function CMSCareer() {
 									</td>
 									<td>
 										<button
-											className="cms__button"
+											className="cms__button cms__table-button"
 											onClick={() => deleteCareerHandler(career)}
 										>
 											<FontAwesomeIcon

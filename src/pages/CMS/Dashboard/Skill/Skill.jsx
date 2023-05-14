@@ -76,7 +76,7 @@ export default function CMSSkill() {
 									</td>
 									<td>
 										<button
-											className="cms__button"
+											className="cms__button cms__table-button"
 											onClick={() => deleteSkillHandler(skill)}
 										>
 											<FontAwesomeIcon

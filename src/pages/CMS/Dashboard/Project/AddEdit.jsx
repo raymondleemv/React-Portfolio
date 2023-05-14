@@ -77,18 +77,9 @@ export default function ProjectAddEditForm(props) {
 					></input>
 				</div>
 				<button type="submit" className="cms__button">
+					{props.add ? props.addIcon : props.editIcon}
 					{props.add ? 'New' : 'Edit'} Project
 				</button>
-				{/* <Link
-					to="/dashboard/projects/add"
-					className="dashboard__link dashboard__button"
-				>
-					<FontAwesomeIcon
-						icon="fa-solid fa-circle-plus"
-						className="dashboard__icon"
-					/>
-					{props.add ? 'New' : 'Edit'} Project
-				</Link> */}
 			</form>
 		</>
 	);

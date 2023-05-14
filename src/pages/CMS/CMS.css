@@ -45,11 +45,15 @@
 .cms__button {
 	font-size: 16px;
 	display: inline-block;
-	background-color: transparent;
+	background-color: var(--white-200);
 	border: 0;
 	padding: 0.5em;
 	border-radius: 10px;
 	align-self: start;
+}
+
+.cms__table-button {
+	background-color: transparent;
 }
 
 .cms-form__checkbox-container {

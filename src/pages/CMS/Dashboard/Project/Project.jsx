@@ -83,7 +83,7 @@ export default function CMSProject() {
 									</td>
 									<td>
 										<button
-											className="cms__button"
+											className="cms__button cms__table-button"
 											onClick={() => deleteProjectHandler(project)}
 										>
 											<FontAwesomeIcon

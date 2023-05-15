@@ -15,7 +15,7 @@ async function getData(url) {
 	return await apiData.json();
 }
 
-async function fetchAuthServer(url, data) {
+async function fetchAuthServer(url, data = {}) {
 	let fetchOptions = {
 		method: 'POST',
 		credentials: 'include',
@@ -24,20 +24,20 @@ async function fetchAuthServer(url, data) {
 		},
 		body: JSON.stringify(data),
 	};
-	let response = await fetch(url, fetchOptions);
+	let response = await fetch(authServerUrl + url, fetchOptions);
 	return response;
 }
 
 async function addProject(data) {
-	return await fetchAuthServer(`${authServerUrl}/api/projects/add`, data);
+	return await fetchAuthServer(`/api/projects/add`, data);
 }
 
 async function editProject(data) {
-	return await fetchAuthServer(`${authServerUrl}/api/projects/edit`, data);
+	return await fetchAuthServer(`/api/projects/edit`, data);
 }
 
 async function deleteProject(data) {
-	return await fetchAuthServer(`${authServerUrl}/api/projects/delete`, data);
+	return await fetchAuthServer(`/api/projects/delete`, data);
 }
 
 async function getCareers() {
@@ -47,15 +47,15 @@ async function getCareers() {
 }
 
 async function addCareer(data) {
-	return await fetchAuthServer(`${authServerUrl}/api/careers/add`, data);
+	return await fetchAuthServer(`/api/careers/add`, data);
 }
 
 async function editCareer(data) {
-	return await fetchAuthServer(`${authServerUrl}/api/careers/edit`, data);
+	return await fetchAuthServer(`/api/careers/edit`, data);
 }
 
 async function deleteCareer(data) {
-	return await fetchAuthServer(`${authServerUrl}/api/careers/delete`, data);
+	return await fetchAuthServer(`/api/careers/delete`, data);
 }
 
 async function getProjects() {
@@ -71,15 +71,15 @@ async function getSkills() {
 }
 
 async function addSkill(data) {
-	return await fetchAuthServer(`${authServerUrl}/api/skills/add`, data);
+	return await fetchAuthServer(`/api/skills/add`, data);
 }
 
 async function editSkill(data) {
-	return await fetchAuthServer(`${authServerUrl}/api/skills/edit`, data);
+	return await fetchAuthServer(`/api/skills/edit`, data);
 }
 
 async function deleteSkill(data) {
-	return await fetchAuthServer(`${authServerUrl}/api/skills/delete`, data);
+	return await fetchAuthServer(`/api/skills/delete`, data);
 }
 
 export {
@@ -96,4 +96,5 @@ export {
 	deleteSkill,
 	editSkill,
 	authServerUrl,
+	fetchAuthServer,
 };

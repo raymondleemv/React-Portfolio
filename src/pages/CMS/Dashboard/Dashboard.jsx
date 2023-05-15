@@ -9,7 +9,7 @@ import CareerAddEditForm from './Career/AddEdit';
 import CMSSkill from './Skill/Skill';
 import SkillAddEditForm from './Skill/AddEdit';
 import Login from './Login/Login';
-import { authServerUrl } from '../../../data/database';
+import { fetchAuthServer } from '../../../data/database';
 
 export default function Dashboard() {
 	const [loggedIn, setLoggedIn] = useState(false);
@@ -24,6 +24,16 @@ export default function Dashboard() {
 		setProjectStatus('');
 	}, [loggedIn]);
 
+	useEffect(() => {
+		const checkLoggedIn = async () => {
+			let response = await fetchAuthServer('api/authentication-status');
+			if (response.status === 200) {
+				setLoggedIn(true);
+			}
+		};
+		checkLoggedIn();
+	}, []);
+
 	let addIcon = (
 		<FontAwesomeIcon
 			icon="fa-solid fa-circle-plus"
@@ -36,10 +46,7 @@ export default function Dashboard() {
 	);
 
 	const logoutHandler = async () => {
-		let response = await fetch(`${authServerUrl}/api/logout`, {
-			method: 'POST',
-			credentials: 'include',
-		});
+		let response = await fetchAuthServer('/api/logout');
 		let message = await response.text();
 		if (response.status === 200) {
 			setLoggedIn(false);

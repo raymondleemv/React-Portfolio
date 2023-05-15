@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { authServerUrl } from '../../../../data/database';
+import { fetchAuthServer } from '../../../../data/database';
 
 export default function Login(props) {
 	const navigate = useNavigate();
@@ -8,17 +8,10 @@ export default function Login(props) {
 	let submitHandler = async function (e) {
 		e.preventDefault();
 		const action = e.target.getAttribute('action');
-		const method = e.target.getAttribute('method');
-		let fetchOptions = {
-			method: method,
-			credentials: 'include',
-		};
-		if (method === 'POST') {
-			fetchOptions.body = new URLSearchParams(new FormData(e.target));
-		}
-		let response = await fetch(action, fetchOptions);
+		let data = Object.fromEntries(new FormData(e.target));
+		let response = await fetchAuthServer(action, data);
 		// fetch status is OK, redirect to CMS main page
-		if (response.status === 200 || response.status === 302) {
+		if (response.status === 200) {
 			props.setLoggedIn(true);
 			navigate('/cms/dashboard');
 		}
@@ -31,7 +24,7 @@ export default function Login(props) {
 			<h1>Login Page for CMS</h1>
 			<form
 				className="cms-form"
-				action={`${authServerUrl}/api/login`}
+				action="/api/login"
 				method="POST"
 				onSubmit={(e) => submitHandler(e)}
 			>

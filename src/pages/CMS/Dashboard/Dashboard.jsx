@@ -9,6 +9,7 @@ import CareerAddEditForm from './Career/AddEdit';
 import CMSSkill from './Skill/Skill';
 import SkillAddEditForm from './Skill/AddEdit';
 import Login from './Login/Login';
+import { authServerUrl } from '../../../data/database';
 
 export default function Dashboard() {
 	const [loggedIn, setLoggedIn] = useState(false);
@@ -35,7 +36,7 @@ export default function Dashboard() {
 	);
 
 	const logoutHandler = async () => {
-		let response = await fetch('http://localhost:3001/logout', {
+		let response = await fetch(`${authServerUrl}/api/logout`, {
 			method: 'POST',
 			credentials: 'include',
 		});

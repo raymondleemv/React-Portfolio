@@ -2,23 +2,9 @@
 
 .dashboard {
 	display: flex;
-	--size-xl: 32px;
-	--size-l: 28px;
-	--size-m: 20px;
-	--size-s: 16px;
-	--size-xs: 12px;
-	--white-100: #faffff;
-	--white-200: #edf2fb;
-	--white-300: #e2eafc;
-	--white-400: #ccdbfd;
-	--blue-100: #4361ee;
-	--blue-200: #3f37c9;
-	--red: #ef476f;
-	--gray-100: #979dac;
-	--gray-200: #5c677d;
-	--gray-300: #33415c;
 	background-color: white;
 	color: var(--gray-300);
+	min-height: 100vh;
 }
 
 .dashboard__header {

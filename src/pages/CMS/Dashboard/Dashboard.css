@@ -103,3 +103,8 @@ button:hover {
 	font-size: 20px;
 	text-align: center;
 }
+
+.dashboard__preview-img {
+	margin-top: 8px;
+	width: 200px;
+}

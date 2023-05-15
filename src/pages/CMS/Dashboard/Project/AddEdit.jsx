@@ -1,13 +1,25 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { addProject, editProject } from '../../../../data/database.js';
-import { useNavigate } from 'react-router-dom';
+import UploadFile from '../../../../components/UploadFile.jsx';
 
 export default function ProjectAddEditForm(props) {
 	const location = useLocation();
 	const navigate = useNavigate();
+
+	const [image, setImage] = useState('');
+
+	// Edit form: load image
+	useEffect(() => {
+		if (location.state) {
+			setImage(location.state.project.photo);
+		}
+	}, []);
+
 	let submitHandler = async function (e) {
 		e.preventDefault();
 		let data = Object.fromEntries(new FormData(e.target));
+		data.photo = image;
 		let response;
 		if (props.add) {
 			response = await addProject(data);
@@ -21,6 +33,7 @@ export default function ProjectAddEditForm(props) {
 		navigate('/cms/dashboard/projects');
 		props.setStatus(message);
 	};
+
 	return (
 		<>
 			<h1>{props.add ? 'New' : 'Edit'} Project</h1>
@@ -66,16 +79,14 @@ export default function ProjectAddEditForm(props) {
 					<label className="cms-form__label" htmlFor="photo">
 						Photo:
 					</label>
-					<input
-						name="photo"
-						defaultValue={location.state?.project.photo}
-					></input>
+					<UploadFile name="photo" setImage={setImage} />
 				</div>
 				<button type="submit" className="cms__button">
 					{props.add ? props.addIcon : props.editIcon}
 					{props.add ? 'New' : 'Edit'} Project
 				</button>
 			</form>
+			<img className="dashboard__preview-img" src={image}></img>
 		</>
 	);
 }

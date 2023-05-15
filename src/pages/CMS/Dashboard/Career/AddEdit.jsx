@@ -1,24 +1,30 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { addCareer, editCareer, getSkills } from '../../../../data/database.js';
 import { useState, useEffect } from 'react';
+import UploadFile from '../../../../components/UploadFile.jsx';
 
 export default function CareerAddEditForm(props) {
 	const location = useLocation();
 	const navigate = useNavigate();
 
 	const [data, setData] = useState([]);
+	const [image, setImage] = useState('');
 	useEffect(() => {
 		const getData = async () => {
 			let skills = await getSkills();
 			setData(skills);
 		};
 		getData();
+		if (location.state) {
+			setImage(location.state.project.photo);
+		}
 	}, []);
 
 	let submitHandler = async function (e) {
 		e.preventDefault();
 		// Construct JSON Object from form
 		let data = Object.fromEntries(new FormData(e.target));
+		data.photo = image;
 		// Form only stores the last checked skill checkbox, manually construct an array to store all checked skills
 		let selectedSkills = Array.from(
 			document.querySelectorAll('input[type=checkbox][name=skills]:checked'),
@@ -86,6 +92,12 @@ export default function CareerAddEditForm(props) {
 					></input>
 				</div>
 				<div className="cms-form__field">
+					<label className="cms-form__label" htmlFor="photo">
+						Photo:
+					</label>
+					<UploadFile name="photo" setImage={setImage} />
+				</div>
+				<div className="cms-form__field">
 					<label className="cms-form__label" htmlFor="career_type">
 						Career Type:
 					</label>
@@ -128,6 +140,7 @@ export default function CareerAddEditForm(props) {
 					{props.add ? 'New' : 'Edit'} Career
 				</button>
 			</form>
+			<img className="dashboard__preview-img" src={image}></img>
 		</>
 	);
 }

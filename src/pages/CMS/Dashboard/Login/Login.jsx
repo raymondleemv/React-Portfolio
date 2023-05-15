@@ -16,8 +16,10 @@ export default function Login(props) {
 			fetchOptions.body = new URLSearchParams(new FormData(e.target));
 		}
 		let response = await fetch(action, fetchOptions);
+		console.log(response);
 		// fetch status is OK, redirect to CMS main page
 		if (response.status === 200 || response.status === 302) {
+			console.log('log in successful');
 			// TODO: change to CMS main page route
 			props.setLoggedIn(true);
 			navigate('/cms/dashboard');

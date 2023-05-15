@@ -21,7 +21,6 @@ export default function CMSSkill(props) {
 			_id: skill._id,
 		};
 		let response = await deleteSkill(data);
-		console.log(await response.text());
 		if (response.status === 200) {
 			props.setStatus(`The ${skill.name} skill has been deleted.`);
 		} else {

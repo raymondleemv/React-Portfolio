@@ -17,8 +17,6 @@ export default function Login(props) {
 		}
 	};
 
-	console.log(import.meta.env);
-
 	return (
 		<>
 			<h1>Login Page for CMS</h1>

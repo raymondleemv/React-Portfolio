@@ -4,7 +4,7 @@ if (import.meta.env.VITE_DEPLOY === 'true') {
 	authServerUrl =
 		'https://portfolio-auth-server-git-development-raymondleemv.vercel.app';
 } else if (import.meta.env.PROD) {
-	authServerUrl = 'https://portfolio-auth-server.vercel.app';
+	authServerUrl = 'https://portfolio-auth-server.raymondleemv.com';
 } else {
 	authServerUrl = 'http://localhost:3001';
 }

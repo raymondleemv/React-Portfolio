@@ -16,7 +16,7 @@ export default function CareerAddEditForm(props) {
 		};
 		getData();
 		if (location.state) {
-			setImage(location.state.project.photo);
+			setImage(location.state.career.photo);
 		}
 	}, []);
 

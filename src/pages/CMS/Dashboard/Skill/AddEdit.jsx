@@ -12,7 +12,7 @@ export default function SkillAddEditForm(props) {
 	// Edit form: load image
 	useEffect(() => {
 		if (location.state) {
-			setImage(location.state.project.photo);
+			setImage(location.state.skill.photo);
 		}
 	}, []);
 

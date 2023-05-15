@@ -35,11 +35,8 @@ export default function CareerAddEditForm(props) {
 			response = await editCareer(data);
 		}
 		let message = await response.text();
-		// fetch status is OK, redirect to CMS main page
-		if (response.status === 200) {
-			// TODO: change to CMS main page route
-			navigate('/cms/dashboard/careers');
-		}
+		// navigate regardless to reflect status message
+		navigate('/cms/dashboard/careers');
 		props.setStatus(message);
 	};
 	return (

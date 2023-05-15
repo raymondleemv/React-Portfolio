@@ -26,7 +26,7 @@ export default function Dashboard() {
 
 	useEffect(() => {
 		const checkLoggedIn = async () => {
-			let response = await fetchAuthServer('api/authentication-status');
+			let response = await fetchAuthServer('/api/authentication-status');
 			if (response.status === 200) {
 				setLoggedIn(true);
 			}

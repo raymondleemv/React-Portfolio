@@ -19,7 +19,6 @@ export default function CMSProject(props) {
 			_id: project._id,
 		};
 		let response = await deleteProject(data);
-		console.log(await response.text());
 		if (response.status === 200) {
 			props.setStatus(`The ${project.title} project has been deleted.`);
 		} else {

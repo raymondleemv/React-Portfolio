@@ -1,5 +1,7 @@
 // TODO: change to auth server url
-const authServerUrl = 'http://localhost:3001';
+const authServerUrl = import.meta.env.PROD
+	? 'https://portfolio-auth-server.vercel.app'
+	: 'http://localhost:3001';
 
 async function getData(url) {
 	let response = fetch(url);

@@ -1,7 +1,13 @@
 // TODO: change to auth server url
-const authServerUrl = import.meta.env.PROD
-	? 'https://portfolio-auth-server.vercel.app'
-	: 'http://localhost:3001';
+let authServerUrl;
+if (import.meta.env.VITE_DEPLOY === 'true') {
+	authServerUrl =
+		'https://portfolio-auth-server-git-development-raymondleemv.vercel.app';
+} else if (import.meta.env.PROD) {
+	authServerUrl = 'https://portfolio-auth-server.vercel.app';
+} else {
+	authServerUrl = 'http://localhost:3001';
+}
 
 async function getData(url) {
 	let response = fetch(url);
@@ -89,4 +95,5 @@ export {
 	addSkill,
 	deleteSkill,
 	editSkill,
+	authServerUrl,
 };

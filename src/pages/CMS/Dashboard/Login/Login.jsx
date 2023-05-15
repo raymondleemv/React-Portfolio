@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { authServerUrl } from '../../../../data/database';
 
 export default function Login(props) {
 	const navigate = useNavigate();
@@ -16,25 +17,12 @@ export default function Login(props) {
 			fetchOptions.body = new URLSearchParams(new FormData(e.target));
 		}
 		let response = await fetch(action, fetchOptions);
-		console.log(response);
 		// fetch status is OK, redirect to CMS main page
 		if (response.status === 200 || response.status === 302) {
-			console.log('log in successful');
-			// TODO: change to CMS main page route
 			props.setLoggedIn(true);
 			navigate('/cms/dashboard');
 		}
 	};
-
-	let authServerLoginUrl;
-	if (import.meta.env.VITE_DEPLOY === 'true') {
-		authServerLoginUrl =
-			'https://portfolio-auth-server-git-development-raymondleemv.vercel.app/api/login';
-	} else if (import.meta.env.PROD) {
-		authServerLoginUrl = 'https://portfolio-auth-server.vercel.app/api/login';
-	} else {
-		authServerLoginUrl = 'http://localhost:3001/api/login';
-	}
 
 	console.log(import.meta.env);
 
@@ -43,8 +31,7 @@ export default function Login(props) {
 			<h1>Login Page for CMS</h1>
 			<form
 				className="cms-form"
-				// TODO: change to auth server login route
-				action={authServerLoginUrl}
+				action={`${authServerUrl}/api/login`}
 				method="POST"
 				onSubmit={(e) => submitHandler(e)}
 			>

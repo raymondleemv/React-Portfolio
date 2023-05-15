@@ -23,13 +23,26 @@ export default function Login(props) {
 			navigate('/cms/dashboard');
 		}
 	};
+
+	let authServerLoginUrl;
+	if (import.meta.env.PROD) {
+		authServerLoginUrl = 'https://portfolio-auth-server.vercel.app/login';
+	} else if (import.meta.env.VITE_DEPLOY === 'true') {
+		authServerLoginUrl =
+			'https://portfolio-auth-server-git-development-raymondleemv.vercel.app/login';
+	} else {
+		authServerLoginUrl = 'http://localhost:3001/login';
+	}
+
+	console.log(import.meta.env.VITE_DEPLOY);
+
 	return (
 		<>
 			<h1>Login Page for CMS</h1>
 			<form
 				className="cms-form"
 				// TODO: change to auth server login route
-				action="https://portfolio-auth-server.vercel.app/login"
+				action={authServerLoginUrl}
 				method="POST"
 				onSubmit={(e) => submitHandler(e)}
 			>

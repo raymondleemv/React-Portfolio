@@ -27,11 +27,11 @@ export default function Login(props) {
 	let authServerLoginUrl;
 	if (import.meta.env.VITE_DEPLOY === 'true') {
 		authServerLoginUrl =
-			'https://portfolio-auth-server-git-development-raymondleemv.vercel.app/login';
+			'https://portfolio-auth-server-git-development-raymondleemv.vercel.app/api/login';
 	} else if (import.meta.env.PROD) {
-		authServerLoginUrl = 'https://portfolio-auth-server.vercel.app/login';
+		authServerLoginUrl = 'https://portfolio-auth-server.vercel.app/api/login';
 	} else {
-		authServerLoginUrl = 'http://localhost:3001/login';
+		authServerLoginUrl = 'http://localhost:3001/api/login';
 	}
 
 	console.log(import.meta.env);

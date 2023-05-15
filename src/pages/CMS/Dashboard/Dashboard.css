@@ -11,6 +11,9 @@
 	width: 200px;
 	min-width: 200px;
 	background-color: var(--white-200);
+	position: sticky;
+	top: 0;
+	height: 100vh;
 }
 
 .dashboard__icon {

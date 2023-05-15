@@ -29,7 +29,7 @@ export default function Login(props) {
 			<form
 				className="cms-form"
 				// TODO: change to auth server login route
-				action="http://localhost:3001/login"
+				action="https://portfolio-auth-server.vercel.app/login"
 				method="POST"
 				onSubmit={(e) => submitHandler(e)}
 			>

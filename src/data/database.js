@@ -42,7 +42,7 @@ async function deleteProject(data) {
 
 async function getCareers() {
 	return await getData(
-		'https://portfolio-backend-khaki-three.vercel.app/api/careers'
+		'https://portfolio-backend.raymondleemv.com/api/careers'
 	);
 }
 
@@ -60,14 +60,12 @@ async function deleteCareer(data) {
 
 async function getProjects() {
 	return await getData(
-		'https://portfolio-backend-khaki-three.vercel.app/api/projects'
+		'https://portfolio-backend.raymondleemv.com/api/projects'
 	);
 }
 
 async function getSkills() {
-	return await getData(
-		'https://portfolio-backend-khaki-three.vercel.app/api/skills'
-	);
+	return await getData('https://portfolio-backend.raymondleemv.com/api/skills');
 }
 
 async function addSkill(data) {

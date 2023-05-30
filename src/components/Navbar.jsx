@@ -1,6 +1,8 @@
 import './Navbar.css';
 import { navbarInit } from '../js/Portfolio';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 export default function Navbar() {
 	useEffect(() => {
 		navbarInit();
@@ -24,6 +26,9 @@ export default function Navbar() {
 				</li>
 				<li>
 					<a href="#contact">Contact</a>
+				</li>
+				<li>
+					<Link to="cms/dashboard">CMS</Link>
 				</li>
 			</ul>
 		</nav>

@@ -64,6 +64,15 @@ export default function Dashboard() {
 					<ul>
 						<li>
 							<FontAwesomeIcon
+								icon="fa-solid fa-house"
+								className="dashboard__icon"
+							/>
+							<Link className="dashboard__link" to="/">
+								Portfolio
+							</Link>
+						</li>
+						<li>
+							<FontAwesomeIcon
 								icon="fa-solid fa-paperclip"
 								className="dashboard__icon"
 							/>

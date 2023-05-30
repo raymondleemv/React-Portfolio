@@ -60,6 +60,7 @@ export default function CareerAddEditForm(props) {
 					<input
 						name="career"
 						defaultValue={location.state?.career.career}
+						required
 					></input>
 				</div>
 				<div className="cms-form__field">
@@ -69,6 +70,7 @@ export default function CareerAddEditForm(props) {
 					<input
 						name="location"
 						defaultValue={location.state?.career.location}
+						required
 					></input>
 				</div>
 				<div className="cms-form__field">
@@ -79,6 +81,7 @@ export default function CareerAddEditForm(props) {
 						name="start_date"
 						type="date"
 						defaultValue={location.state?.career.start_date}
+						required
 					></input>
 				</div>
 				<div className="cms-form__field">

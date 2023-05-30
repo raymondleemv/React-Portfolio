@@ -23,6 +23,7 @@ export default function UploadFile(props) {
 			type="file"
 			name={props.name}
 			onChange={(e) => uploadImage(e)}
+			required
 		></input>
 	);
 }

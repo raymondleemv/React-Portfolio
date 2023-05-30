@@ -49,13 +49,18 @@ export default function ProjectAddEditForm(props) {
 					<input
 						name="title"
 						defaultValue={location.state?.project.title}
+						required
 					></input>
 				</div>
 				<div className="cms-form__field">
 					<label className="cms-form__label" htmlFor="url">
 						URL:
 					</label>
-					<input name="url" defaultValue={location.state?.project.url}></input>
+					<input
+						name="url"
+						defaultValue={location.state?.project.url}
+						required
+					></input>
 				</div>
 				<div className="cms-form__field">
 					<label className="cms-form__label" htmlFor="github">
@@ -64,6 +69,7 @@ export default function ProjectAddEditForm(props) {
 					<input
 						name="github"
 						defaultValue={location.state?.project.github}
+						required
 					></input>
 				</div>
 				<div className="cms-form__field">
@@ -73,6 +79,7 @@ export default function ProjectAddEditForm(props) {
 					<textarea
 						name="content"
 						defaultValue={location.state?.project.content}
+						required
 					></textarea>
 				</div>
 				<div className="cms-form__field">

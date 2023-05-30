@@ -30,13 +30,13 @@ export default function Login(props) {
 					<label className="cms-form__label" htmlFor="email">
 						Email:
 					</label>
-					<input type="email" name="email" />
+					<input type="email" name="email" required />
 				</div>
 				<div className="cms-form__field">
 					<label className="cms-form__label" htmlFor="password">
 						Password:
 					</label>
-					<input type="password" name="password" />
+					<input type="password" name="password" required />
 				</div>
 				<button className="cms__button" type="submit">
 					<FontAwesomeIcon

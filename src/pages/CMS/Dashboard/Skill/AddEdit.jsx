@@ -47,7 +47,11 @@ export default function SkillAddEditForm(props) {
 					<label className="cms-form__label" htmlFor="name">
 						Name:
 					</label>
-					<input name="name" defaultValue={location.state?.skill.name}></input>
+					<input
+						name="name"
+						defaultValue={location.state?.skill.name}
+						required
+					></input>
 				</div>
 				<div className="cms-form__field">
 					<label className="cms-form__label" htmlFor="photo">

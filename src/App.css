@@ -97,6 +97,11 @@ body {
 button {
 	cursor: pointer;
 }
+
+.error-text {
+	color: red;
+}
+
 /* 2a. Logo */
 #home-logo {
 	background-image: url(../images/header/logo.png);

@@ -1,12 +1,13 @@
 import React from 'react';
 import Project from './Project';
+import './Project.css';
 
 describe('<Project />', () => {
 	// Mount the component and Wait for API call to finish at the start of each test
 	beforeEach(() => {
 		cy.intercept({
 			method: 'GET',
-			url: 'https://portfolio-backend-khaki-three.vercel.app/api/projects',
+			url: 'https://portfolio-backend.raymondleemv.com/api/projects',
 		}).as('getProjects');
 		cy.mount(<Project />);
 		cy.wait('@getProjects');

@@ -1,9 +1,11 @@
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fetchAuthServer } from '../../../../data/database';
 
 export default function Login(props) {
 	const navigate = useNavigate();
+	const [status, setStatus] = useState('');
 
 	let submitHandler = async function (e) {
 		e.preventDefault();
@@ -14,12 +16,16 @@ export default function Login(props) {
 		if (response.status === 200) {
 			props.setLoggedIn(true);
 			navigate('/cms/dashboard');
+		} else {
+			let responseText = await response.text();
+			setStatus(responseText);
 		}
 	};
 
 	return (
 		<>
 			<h1>Login Page for CMS</h1>
+			{status && <p className="error-text">{status}</p>}
 			<form
 				className="cms-form"
 				action="/api/login"
